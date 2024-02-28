@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/application.js"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e067495424.js" crossorigin="anonymous"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="waviy">Shopping Cart</h1>
+    <div class="waviy">
+      <span style="--i:1"><img width="48" height="48" src="https://img.icons8.com/emoji/48/peanuts-emoji.png" alt="peanuts-emoji"/></span>
+      <span style="--i:2"><img width="48" height="48" src="https://img.icons8.com/emoji/48/chestnut.png" alt="chestnut"/></span>
+      <span style="--i:3"><img width="48" height="48" src="https://img.icons8.com/color/48/hazelnut.png" alt="hazelnut"/></span>
+      <span style="--i:4"><img width="48" height="48" src="https://img.icons8.com/color/48/brazil-nut.png" alt="brazil-nut"/></span>
+      <span style="--i:5"><img width="48" height="48" src="https://img.icons8.com/color/48/almond.png" alt="almond"/></span>
+      <span style="--i:6"><img width="48" height="48" src="https://img.icons8.com/color/48/pecan.png" alt="pecan"/></span>
+     </div>
+    <div class="container">
+      <div class="row">
+        <table id="cart" class="col-lg-6 col-md-6">
+        <thead>
+            <tr>
+                <th class="border-0"> </th>
+                <th class="border-1">Quantity</th>
+                <th class="border-1">Price</th>
+                <th class="border-1">Subtotal</th>
+                <th class="hidden" >Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Predefined items with quantity 0 -->
+            <tr>
+                <td class="border">Almonds</td>
+                <td class="border">0</td>
+                <td class="border">10.00</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Brazil Nuts</td>
+                <td class="border">0</td>
+                <td class="border">25.50</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Cashews</td>
+                <td class="border">0</td>
+                <td class="border">15.75</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Hazelnuts</td>
+                <td class="border">0</td>
+                <td class="border">18.00</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Macadamias</td>
+                <td class="border">0</td>
+                <td class="border">10.50</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Pecans</td>
+                <td class="border">0</td>
+                <td class="border">8.00</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Pine Nuts</td>
+                <td class="border">0</td>
+                <td class="border">33.75</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <tr>
+                <td class="border">Pistachios</td>
+                <td class="border">0</td>
+                <td class="border">12.00</td>
+                <td class="border">0.00</td>
+                <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+            <!-- Total Price calculated after adding or removing items -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="no-border total">Total:&nbsp;</td>
+                <td id="total-price" class="no-border total"> $0.00</td>
+                
+            </tr>
+        </tfoot>
+    </table>
+      </div>
+    </div>
+
+  </body>
+</html>
