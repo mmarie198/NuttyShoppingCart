@@ -10,6 +10,19 @@ $(document).ready(function () {
         updateTotal();
     });
 
+        // Define addCustomItem outside the click event
+function addCustomItem() {
+    var itemName = $('#itemInput').val();
+    var price = parseFloat($('#priceInput').val());
+    addCartItem(itemName, 0, price); // Set quantity to 0 for custom items
+    updateTotal();
+}
+
+// Add custom item to the cart
+$(document).on('click', '.add-item', function () {
+    addCustomItem();
+});
+
     // Update total price
     function updateTotal() {
         var totalPrice = 0;
