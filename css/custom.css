@@ -1,7 +1,6 @@
 body {
     background-image: url(https://images.unsplash.com/photo-1542990253-a781e04c0082?q=80&w=1994&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     font-family: Arial, sans-serif;
-    margin: 50px;
     margin-top: 20px;
 }
 
@@ -40,6 +39,7 @@ h1 {
     justify-content: center;
   }
 table {
+    margin: auto;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
@@ -77,6 +77,42 @@ th {
     font-weight: 30px;
     font-style: normal;
 }
+
+#custom {
+  align-self:end;
+  margin-bottom:90px;
+    width:200px;
+    justify-content: center;
+}
+
+h5 {
+  font-family: "Varela Round", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+input {
+  width:150px;
+    font-family: "Varela Round", sans-serif;
+    margin-left: 23px;
+    margin-bottom: 5px;
+    padding: 8px;
+ }
+
+.custom-border {
+  border: 3px solid rgb(71, 19, 19);
+  border-radius: 5%;
+  background-color: #f2f2f275;
+}
+
+.custom-add {
+  margin-left: 10px;
+}
+
+ .container {
+  width:850px;
+  margin-left:235px;
+ }
 
 .no-border {
     border: none;
@@ -161,10 +197,10 @@ th {
   will-change: transform,opacity;
   z-index: 0;
 }
+
 .total {
     text-align: left;
     font-size: large;
-    width: 100px;
 }
 
 tfoot {
@@ -195,3 +231,4 @@ tfoot {
   width: auto;
   z-index: 0;
 }
+
