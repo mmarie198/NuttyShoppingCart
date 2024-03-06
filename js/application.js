@@ -10,18 +10,10 @@ $(document).ready(function () {
         updateTotal();
     });
 
-        // Define addCustomItem outside the click event
-function addCustomItem() {
-    var itemName = $('#itemInput').val();
-    var price = parseFloat($('#priceInput').val());
-    addCartItem(itemName, 0, price); // Set quantity to 0 for custom items
-    updateTotal();
-}
-
-// Add custom item to the cart
-$(document).on('click', '.add-item', function () {
+    // Add custom item to the cart
+  $(document).on('click', '.add-custom-item', function () {
     addCustomItem();
-});
+  });
 
     // Update total price
     function updateTotal() {
@@ -39,14 +31,22 @@ $(document).on('click', '.add-item', function () {
     // Add item to the cart function
     function addCartItem(itemName, price, quantity) {
         var newRow = `<tr>
-                        <td>${itemName}</td>
-                        <td>${quantity}</td>
-                        <td>${price.toFixed(2)}</td>
-                        <td>${(quantity * price).toFixed(2)}</td>
-                        <td><button class="add-item">Add</button></td>
+                        <td class="border">${itemName}</td>
+                        <td class="border">${quantity - 1}</td>
+                        <td class="border">${price.toFixed(2)}</td>
+                        <td class="border">${(quantity * price).toFixed(2)}</td>
+                        <td class="border"><button class="add-item">Add</button></td>
+                        <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
                       </tr>`;
         $('#cart tbody').append(newRow);
     }
+
+    // Add custom item to the cart function
+    function addCustomItem() {
+    var itemName = $('#customItemInput').val();
+    var price = parseFloat($('#customPriceInput').val());
+    addCartItem(itemName, price, 1); // Set quantity to 1 for custom items
+  }
 
     // Remove item from the cart
 $(document).on('click', '.remove-item', function () {
@@ -56,6 +56,11 @@ $(document).on('click', '.remove-item', function () {
     if (quantity > 0) {
         row.find('td:nth-child(2)').text(quantity - 1);
     }
+
+    updateTotal();
+});
+
+});
 
     updateTotal();
 });
