@@ -106,17 +106,8 @@
                 <td class="border">0.00</td>
                 <td class="border"><button class="add-item"><i class="fa-solid fa-plus"></i></button></td>
                 <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
-            </tr>
-          <tr>
-                <td class="border"><input type="text" id="itemInput" placeholder="Enter Item"></td>
-                <td class="border">0</td>
-                <td class="border"><input type="number" id="priceInput" placeholder="Enter Price"></td>
-                <td class="border">0.00</td>
-                <td class="border"><button class="add-item" onclick="addCustomItem()"><i class="fa-solid fa-plus"></i>Add</button></td>
-                <td class="border"><button class="remove-item"><i class="fa-solid fa-trash"></i></button></td>
-            </tr>
+            </tr>   
             <!-- Total Price calculated after adding or removing items -->
-        </tbody>
         <tfoot>
             <tr>
                 <td class="no-border total">Total:&nbsp;</td>
@@ -124,9 +115,23 @@
                 
             </tr>
         </tfoot>
-    </table>
       </div>
     </div>
-
+    <div id="custom">
+        <!-- Add item form outside the items table -->
+          <div class="custom-border">
+            <h5>Add Custom Items</h5>
+            <div>
+              <input type="text" id="customItemInput" placeholder="Enter Item">
+            </div>
+            <div>
+              <input type="number" id="customPriceInput" placeholder="Enter Price">
+            </div>
+            <div class="custom-add">
+              <button class="add-custom-item add-item" onclick="addCustomItem()"><i class="fa-solid fa-plus"></i></button>
+                <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+      </div>
   </body>
 </html>
